@@ -1,5 +1,10 @@
 ## Time Series Forecasting Models and Projects
 
+[![Python](https://img.shields.io/badge/Python-3.7%2B-blue?style=flat&logo=python)](https://www.python.org/)
+[![TensorFlow](https://img.shields.io/badge/TensorFlow-2.6%2B-orange?style=flat&logo=tensorflow)](https://www.tensorflow.org/)
+[![R](https://img.shields.io/badge/R-3.6%2B-blue?style=flat&logo=r)](https://www.r-project.org/)
+
+
 * In this repository, I have included a variety of time series forecasting models and related projects. These projects demonstrate my skills and experience in this domain. You can find the following files and projects:
 
 ## Projects:
@@ -30,4 +35,4 @@ Let's connect and explore how my skills and expertise in time series forecasting
  
   [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect%20with%20Me-blue?style=flat&logo=linkedin)](https://www.linkedin.com/in/samiabelhaddad/)
   [![Email](https://img.shields.io/badge/Email-Contact%20Me-brightgreen?style=flat&logo=gmail)](mailto:samiamagbelhaddad@gmail.com)
-
+  [![Portfolio](https://img.shields.io/badge/Portfolio-Visit%20My%20Portfolio-white?style=flat&logo=website)](https://your-portfolio-url-here.com/)

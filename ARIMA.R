@@ -1,4 +1,4 @@
-#libraries
+# Load required libraries
 library(quantmod)
 library(ggplot2)
 library(forecast)
@@ -7,57 +7,68 @@ library(rugarch)
 library(prophet)
 library(tsfknn)
 
-#lodaing data
-getSymbols("META",src="yahoo",from="2021-11-05",to = "2022-11-05")
-head(META)
-META
+# Load financial data for the stock 'META' from Yahoo Finance
+getSymbols("META", src = "yahoo", from = "2021-11-05", to = "2022-11-05")
 
-#plotting the time series
+# Display the first few rows of the 'META' dataset
+head(META)
+
+# Plot the time series of the closing prices of the 'META' stock
 ggtsdisplay(META$META.Close)
 
-# 1 ---- Tester La stationarité:
+# 1. Verify Stationarity
 
-#---Analytical Approach---#
-#adfuller augmented test:
+# --- Analytical Approach --- #
+# Apply the Augmented Dickey-Fuller test to check for stationarity
 adf.test(META$META.Close)
 
-#Cas de differencing :
-#1st differencing 
-differenced<-diff(META$META.Close)
-#Adf test after differencing 
+# Case of differencing:
+# Apply 1st differencing to make the data stationary
+differenced <- diff(META$META.Close)
+# Perform the Augmented Dickey-Fuller test after differencing
 adf.test(differenced)
 
+# 2. Identify the Model
 
-# 2 --- Idetification of model :
-#---Autocorrelation Function & Partial ACF---#
+# --- Autocorrelation Function (ACF) & Partial ACF --- #
 
+# Create ACF and PACF plots for the original time series data
 acf(META$META.Close)
 pacf(META$META.Close)
 
-#2 --- Estimation:
+# Estimate the model for the original data
+meta_model_original <- auto.arima(META$META.Close, ic = "aic", trace = TRUE)
 
-#for Original Data :
-meta_model_original<-auto.arima(META$META.Close,ic="aic",trace=TRUE)
+# 3. Examine Model Diagnostics
 
-# 3 --- Diagnostics :
+# Analyze the Residuals:
 
-#Analyse des Residus:
+# Extract residuals from the model
+res <- meta_model_original$residuals
 
-res<-meta_model_original$residuals
+# Plot the ACF of the residuals
 acf(res)
+
+# Create a QQ plot of the residuals
 qqnorm(res)
 qqline(res)
+
+# Perform the Shapiro-Wilk normality test for residuals
 shapiro.test(res)
 
+# 4. Generate Forecasts
 
-# 4 --- Forecasting :
-#Original series :
-Forecasted <-forecast(meta_model_original,level=c(95),h=10)
+# Forecast the original time series using the estimated model
+Forecasted <- forecast(meta_model_original, level = c(95), h = 10)
+
+# Plot the forecasted values and prediction intervals
 plot(Forecasted)
+
+# Display the forecasted values
 Forecasted
 
-#Model Validation
-Box.test(Forecasted$residuals, lag=5, type= "Ljung-Box")
-Box.test(Forecasted$residuals, lag=15, type= "Ljung-Box")
-Box.test(Forecasted$residuals, lag=25, type= "Ljung-Box")
-
+# Model Validation
+# Apply the Ljung-Box test for the residuals at different lags
+Box.test(Forecasted$residuals, lag = 5, type = "Ljung-Box")
+Box.test(Forecasted$residuals, lag = 15, type = "Ljung-Box")
+Box.test(Forecasted$residuals, lag = 25, type = "Ljung-Box")
