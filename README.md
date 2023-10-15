@@ -15,6 +15,7 @@ An extended version of ARIMA that includes seasonal components for more accurate
 
 * **TimeSeriesDecomposition.ipynb**: This Jupyter Notebook showcases time series decomposition techniques to identify trends, seasonality, and residuals. It's a valuable tool for data exploration and understanding.
 
+* **TseriesAnalysis** : This project provides a comprehensive analysis of time series data using Python, including data preprocessing, visualization, and statistical analysis.
 * **TseriesForecastingRNNs.ipynb**: An example of using Recurrent Neural Networks specifically LSTMs for time series forecasting, the deep learning approach for complex data patterns.
 
 ## Dependencies:
@@ -34,5 +35,5 @@ Let's connect and explore how my skills and expertise in time series forecasting
  Feel free to reach out to me on LinkedIn through []or through email at
  
   [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect%20with%20Me-blue?style=flat&logo=linkedin)](https://www.linkedin.com/in/samiabelhaddad/)
-  [![Email](https://img.shields.io/badge/Email-Contact%20Me-brightgreen?style=flat&logo=gmail)](mailto:samiamagbelhaddad@gmail.com)
+  [![Email](https://img.shields.io/badge/Email-Contact%20Me-brightgreen?style=flgat&logo=gmail)](mailto:samiamagbelhaddad@gmail.com)
   [![Portfolio](https://img.shields.io/badge/Portfolio-Visit%20My%20Portfolio-white?style=flat&logo=website)](https://your-portfolio-url-here.com/)
