@@ -32,7 +32,7 @@ git clone https://github.com/yourusername/timeseries-forecasting.git
 
 ## Contact:
 Let's connect and explore how my skills and expertise in time series forecasting can benefit your organization.
- Feel free to reach out to me on LinkedIn through []or through email at
+ Feel free to reach out to me on LinkedIn or through email & don't forget to visit my portfolio.
  
   [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect%20with%20Me-blue?style=flat&logo=linkedin)](https://www.linkedin.com/in/samiabelhaddad/)
   [![Email](https://img.shields.io/badge/Email-Contact%20Me-brightgreen?style=flgat&logo=gmail)](mailto:samiamagbelhaddad@gmail.com)
